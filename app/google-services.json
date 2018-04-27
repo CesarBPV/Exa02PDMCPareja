@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "844826223211",
+    "firebase_url": "https://exa02-pdm-cpareja.firebaseio.com",
+    "project_id": "exa02-pdm-cpareja",
+    "storage_bucket": "exa02-pdm-cpareja.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844826223211:android:04a7808fa8c97df2",
+        "android_client_info": {
+          "package_name": "com.hola.cesar.exa02_pdm_cpareja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844826223211-vvm93ptebvqk0o21ar1aprempr1cb8ae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoDxMEx1ipT1569TrJXJwC60lJic4O37M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
