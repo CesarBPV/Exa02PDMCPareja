@@ -29,5 +29,13 @@
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
     </LinearLayout>
+    <ProgressBar
+        android:layout_margin="10dp"
+        android:id="@+id/splash_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
 
 </RelativeLayout>

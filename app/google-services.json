@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "844826223211-08963m5qm6dds5m04km47aric54dnd5h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hola.cesar.exa02_pdm_cpareja",
+            "certificate_hash": "9cda40193367ef99ad0912e283b0f9dea6412fbd"
+          }
+        },
+        {
           "client_id": "844826223211-vvm93ptebvqk0o21ar1aprempr1cb8ae.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844826223211-vvm93ptebvqk0o21ar1aprempr1cb8ae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

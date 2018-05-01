@@ -9,19 +9,24 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class SplashActivity extends AppCompatActivity {
     private TextView tv;
     private ImageView iv;
+    private ProgressBar mProgressView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.AppTheme2);
+        setTheme(R.style.AppTheme_NoActionBar);
         setContentView(R.layout.activity_splash);
         tv=findViewById(R.id.tapp);
         iv=findViewById(R.id.imv);
+        mProgressView = findViewById(R.id.splash_progress);
+        mProgressView.setIndeterminate(true);
+        mProgressView.animate();
         Animation myAnim= AnimationUtils.loadAnimation(this,R.anim.mytransition);
         tv.startAnimation(myAnim);
         iv.startAnimation(myAnim);

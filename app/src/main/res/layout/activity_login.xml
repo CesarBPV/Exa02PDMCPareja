@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical">
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:title="Iniciar Sesión"
-        android:background="@color/colorPrimary">
-
-    </android.support.v7.widget.Toolbar>
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
@@ -74,6 +67,7 @@
                 android:text="Iniciar Sesión"
                 android:background="@drawable/button_style"
                 android:textColor="#fff"
+                android:onClick="login"
                 android:textStyle="bold" />
 
         </LinearLayout>
