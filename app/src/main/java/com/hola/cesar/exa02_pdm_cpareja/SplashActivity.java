@@ -2,6 +2,7 @@ package com.hola.cesar.exa02_pdm_cpareja;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.graphics.drawable.TransitionDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,5 +40,19 @@ public class SplashActivity extends AppCompatActivity {
 
         });
         colorAnimation.start();
+        final Intent i=new Intent(this,LoginActivity.class);
+        Thread timer =new Thread(){
+            @Override
+            public void run() {
+                try {
+                    sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }finally {
+                    startActivity(i);
+                }
+            }
+        };
+        timer.start();
     }
 }
