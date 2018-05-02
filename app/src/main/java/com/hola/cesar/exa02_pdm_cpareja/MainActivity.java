@@ -3,6 +3,8 @@ package com.hola.cesar.exa02_pdm_cpareja;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,15 +25,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flcontent,HomeFragment.newInstance("1","home")).commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -78,21 +73,37 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
+        Fragment fragment=null;
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_home) {
+            setTitle("Inicio");
+            fragment=HomeFragment.newInstance("1","2");
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_clothes) {
+            setTitle("Ropa");
+            fragment=ClothesFragment.newInstance("1","2");
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_accesories) {
+            setTitle("Accesorios");
+            fragment=AccesoriesFragment.newInstance("1","2");
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_shoes) {
+            setTitle("Calzados");
+            fragment=ShoesFragment.newInstance("1","2");
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_settings) {
+            setTitle("Configuración");
+            fragment=HomeFragment.newInstance("1","2");
+
+        } else if (id == R.id.nav_close) {
+            setTitle("Hola");
+            fragment=HomeFragment.newInstance("1","2");
 
         }
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flcontent,fragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
